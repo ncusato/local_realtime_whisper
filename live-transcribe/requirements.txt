@@ -1,0 +1,5 @@
+faster-whisper==1.2.1
+ctranslate2>=4.4,<5
+av>=11,<17
+PyAudioWPatch==0.2.12.8; sys_platform == "win32"
+sounddevice>=0.5.1,<0.6; sys_platform == "darwin"

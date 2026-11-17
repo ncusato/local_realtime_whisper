@@ -1,0 +1,16 @@
+.venv/
+**/__pycache__/
+*.py[cod]
+**/models/
+outputs/
+sessions/
+*.wav
+*.mp3
+*.mp4
+*.log
+**/transcript.*
+**/status.json
+**/status.tmp
+**/summary.md
+.env
+.DS_Store
