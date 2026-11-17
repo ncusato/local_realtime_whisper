@@ -21,6 +21,12 @@ For teams already using an approved Codex environment, local speech recognition 
 
 ## Related projects
 
+![Feature comparison of Local Realtime Whisper, Meetily Community, WhisperLive, Screenpipe, Granola, and Notion AI Meeting Notes](assets/comparison-matrix.png)
+
+*The star highlights this project's column; it is not a rating. Checks show supported capabilities; triangles indicate setup, integration, or edition dependencies. The comparison includes limitations, including our lack of speaker identification and the online Codex step. Features vary by version and plan; this graphic reflects November 2026.*
+
+The commercial-product entries reference [Granola's local/cloud processing explanation](https://www.granola.ai/blog/local-first-ai-notetaker-vs-cloud) and [Notion's AI Meeting Notes documentation](https://www.notion.com/help/ai-meeting-notes). Open-source and source-available project references are linked below.
+
 This project builds on an existing ecosystem rather than a new transcription technique. Depending on the interface and deployment you want, also consider:
 
 | Project | Approach | How this project differs |

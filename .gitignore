@@ -13,4 +13,6 @@ sessions/
 **/status.tmp
 **/summary.md
 .env
+.env.*
+!.env.example
 .DS_Store
