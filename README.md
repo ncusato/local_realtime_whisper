@@ -137,4 +137,10 @@ Replay uses the same windowing and inference without opening a capture device. A
 - [PyAudioWPatch](https://github.com/s0d3s/PyAudioWPatch) for Windows loopback; [sounddevice raw streams](https://python-sounddevice.readthedocs.io/en/latest/api/raw-streams.html) for macOS input.
 - [BlackHole](https://github.com/ExistentialAudio/BlackHole) for optional macOS audio routing.
 
-This is a community workflow, not an official OpenAI meeting recorder. Third-party packages, drivers, and model weights retain their own licenses.
+## License and contributions
+
+This project's original code and documentation are licensed under the [MIT License](LICENSE). Third-party packages, drivers, and model weights retain their own licenses.
+
+You are welcome to fork the repository and propose changes through a pull request. Publishing the code does not grant write access to this repository; changes to the upstream repository remain under the owner's control.
+
+This is a community workflow, not an official OpenAI meeting recorder.
