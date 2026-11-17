@@ -2,6 +2,35 @@
 
 Local microphone and system-audio transcription for **Windows and macOS**, with timestamped console output and questions/summaries in **Codex**. CPU-friendly Whisper base is the default. No transcription API, GPU, or separate question-answering model is needed.
 
+## Background
+
+Meeting assistants such as [Granola](https://www.granola.ai/) and [Notion AI Meeting Notes](https://www.notion.com/product/ai-meeting-notes) make it easier to turn conversations into useful notes and follow-ups. I built this project to bring that workflow into tools I already use: my existing meeting application, a local terminal, and Codex.
+
+The workflow is straightforward: capture microphone and computer audio locally, transcribe it with Whisper, then ask Codex questions during the call or request a summary afterward. There is no meeting bot to invite, separate notes workspace to maintain, or additional transcription service to connect. It works from the selected audio devices rather than a meeting-platform integration. Codex access is still required for the conversational workflow.
+
+## Why a local approach can fit business workflows
+
+For teams already using an approved Codex environment, local speech recognition can reduce the number of services handling meeting audio while keeping questions and follow-ups in a familiar workflow:
+
+- **Keep audio processing on the machine.** This recorder does not upload audio to a transcription provider. Once the model is cached, speech recognition can run offline.
+- **Control the artifacts.** Recordings and timestamped text/JSON are stored in a directory you choose. They can be reviewed, moved, or deleted using existing company storage and retention practices. Local files still require appropriate endpoint protection and access controls.
+- **Use the tools already at hand.** Keep your normal meeting application and ask Codex “What did we agree?”, “What date was mentioned?”, or “What are my actions?” There is no extra transcription subscription or separate LLM API key for this workflow; existing Codex access and usage limits still apply.
+- **Inspect and adapt the workflow.** The capture code, recognition settings, and skill instructions are available in this repo, making the data flow easier to review and the behavior easier to change.
+
+**The privacy boundary matters:** audio recognition is local, but transcript text read by Codex is sent to its configured model for answers and summaries. This is not an entirely offline assistant or a guarantee of compliance. Use an organization-approved environment, follow meeting-recording requirements, and handle recordings according to company policy. Local processing is a useful option when audio handling and workflow simplicity matter; managed meeting products may be a better fit when centralized administration, collaboration, or retention controls are the priority.
+
+## Related projects
+
+This project builds on an existing ecosystem rather than a new transcription technique. Depending on the interface and deployment you want, also consider:
+
+| Project | Approach | How this project differs |
+| --- | --- | --- |
+| [Meetily Community Edition](https://github.com/Zackriya-Solutions/meetily) | MIT-licensed meeting assistant with local transcription and AI summaries. | This repo provides scripts and a Codex skill, using the current Codex chat for questions and summaries. |
+| [WhisperLive](https://github.com/collabora/WhisperLive) | MIT-licensed, nearly-live Whisper transcription using a client/server architecture. | This repo focuses on a local microphone/system-audio session with file-based progress and Codex orchestration. |
+| [Screenpipe](https://github.com/screenpipe/screenpipe) | Broader screen/audio capture and searchable work history. Its current license is **source-available**, with commercial-use restrictions; it should not be treated as an unrestricted open-source alternative. | This repo captures explicitly started audio sessions and does not record the screen or maintain a continuous work-history service. |
+
+These descriptions refer to the linked projects, not a feature-for-feature evaluation. Review their current licenses and deployment/data-flow settings before business use.
+
 ## Use with Codex
 
 Give Codex this repository URL and ask:
